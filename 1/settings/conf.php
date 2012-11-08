@@ -18,7 +18,7 @@ $language			= 'en';
 $template	= 'standard';
 
 //Administrators email address (logs can be sent there)	
-$admin_email		= 'admin@localhost';
+$admin_email		= 'jack@easyapple.net';
 
 // Print spidering results to standard out
 $print_results		= 1;
