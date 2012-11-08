@@ -1,3 +1,4 @@
+<a href="../search.php">Start Sphider</a>
 <?php 
 /*******************************************
 * Sphider Version 1..3.*
