@@ -139,7 +139,7 @@ mysql_query("create table `".$mysql_table_prefix."query_log` (
 	time timestamp(14),
 	elapsed float(2),
 	results int,
-	key keyid(query))");
+	key int)");
 	//key query_key(query))");
 
 if (mysql_errno() > 0) {
