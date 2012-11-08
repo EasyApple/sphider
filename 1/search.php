@@ -101,9 +101,11 @@ function getmicrotime(){
 
 function poweredby () {
 	global $sph_messages;
+	<a href="admin/admin.php">µ«»Î∫ÛÃ®</a>
+    print $sph_messages['Transplant by'];?>  <a href="http://www.easyapple.net/"><img src="easyapple-logo.png" border="0" style="vertical-align: middle" alt="Sphider"></a>
     //If you want to remove this, please donate to the project at http://www.sphider.eu/donate.php
-    print $sph_messages['Powered by'];?>  <a href="http://www.easyapple.net/"><img src="easyapple-logo.png" border="0" style="vertical-align: middle" alt="Sphider"></a>
-
+    print $sph_messages['Powered by'];?>  <a href="http://www.sphider.eu/"><img src="sphider-logo.png" border="0"
+	style="vertical-align: middle" alt="Sphider"></a>
     <?php 
 }
 
