@@ -138,8 +138,9 @@ mysql_query("create table `".$mysql_table_prefix."query_log` (
 	query varchar(255),
 	time timestamp(14),
 	elapsed float(2),
-	results int, 
-	key query_key(query))");
+	results int,
+	key keyid(query))");
+	//key query_key(query))");
 
 if (mysql_errno() > 0) {
 	print "Error: ";
