@@ -12,7 +12,7 @@ General settings
 $version_nr			= '1.3.5';
 
 //Language of the search page 
-$language			= 'en';
+$language			= 'cns';
 
 // Template name/directory in templates dir
 $template	= 'standard';
