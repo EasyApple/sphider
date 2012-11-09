@@ -23,6 +23,11 @@ if($send2=="Optimize"){
                "# Creation date: ".date("d-M-Y H:s",time())."\n".
                "# Database: ".$database."\n".
                "# MySQL Server version: ".mysql_get_server_info()."\n\n" ;
+
+	if (!$fp) {
+		print "Backup file is not writable.";
+	}
+
 	gzwrite ($fp,$copyr);
 	gzclose ($fp);
   chmod($backup_path.$filename, 0777);
