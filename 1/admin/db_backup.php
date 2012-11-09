@@ -1,7 +1,7 @@
 <?php
 include "auth.php";
 $backup_path="saestor://sphider/backup/";
-$filename="app_sphider.sql.gz";
+//$filename="app_sphider.sql.gz";
 
 $stats  = mysql_query("SHOW TABLE STATUS FROM $database LIKE '$mysql_table_prefix%'");
 $numtables = mysql_num_rows($stats);
@@ -19,7 +19,6 @@ if($send2=="Optimize"){
    if (!is_dir($backup_path)) mkdir($backup_path, 0766);
    chmod($backup_path, 0777);
 
-	$filename="app_sphider.sql.gz";
 	$fp = gzopen ($backup_path.$filename,"w");
         $copyr="# Table backup from Sphider\n".
                "# Creation date: ".date("d-M-Y H:s",time())."\n".
