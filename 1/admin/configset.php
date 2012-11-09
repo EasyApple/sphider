@@ -102,10 +102,10 @@ if ($_suggest_rows == "") {
 
 
 if (isset($Submit)) {
-	if (!is_writable("saekv://settings/conf.php")) {
+	if (!is_writable("saestor://sphider/settings/conf.php")) {
 		print "Configuration file is not writable, chmod 666 conf.php under *nix systems";
 	} else {
-		$fhandle=fopen("saekv://settings/conf.php","wb");
+		$fhandle=fopen("saestor://sphider/settings/conf.php","wb");
 		fwrite($fhandle,"<?php \n");
 		fwrite($fhandle,"/***********************\n Sphider configuration file\n***********************/");
 		fwrite($fhandle,"\n\n\n/*********************** \nGeneral settings \n***********************/");
@@ -230,7 +230,7 @@ if (isset($Submit)) {
 	}
 		//header("location: admin.php");		
 } 	
-include "saekv://settings/conf.php"; 
+include "saestor://sphider/settings/conf.php"; 
 ?>
 <div id='submenu'>&nbsp;</div>
 <div id="settings">
