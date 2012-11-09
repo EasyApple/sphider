@@ -18,19 +18,17 @@ if($send2=="Optimize"){
    if (!is_dir($backup_path)) mkdir($backup_path, 0766);
    chmod($backup_path, 0777);
 
-	$filename="app_sphider.sql.gz";
+	$filename="app_sphider.sql";
 	//$fp = gzopen ($backup_path.$filename,"w");
 	$fhandle = fopen($backup_path.$filename,"w");
 	if (!$fhandle) {
 		print "Configuration file is not writable.";
 	}
 
-
 	$copyr="# Table backup from Sphider\n".
 		   "# Creation date: ".date("d-M-Y H:s",time())."\n".
 		   "# Database: ".$database."\n".
 		   "# MySQL Server version: ".mysql_get_server_info()."\n\n" ;
-
 
 	gzwrite ($fp,$copyr);
 	gzclose ($fp);
