@@ -29,8 +29,13 @@ if($send2=="Optimize"){
 		   "# Database: ".$database."\n".
 		   "# MySQL Server version: ".mysql_get_server_info()."\n\n" ;
 
-	gzwrite ($fp,$copyr);
-	gzclose ($fp);
+	//gzwrite ($fp,$copyr);
+	//gzclose ($fp);
+	
+	fwrite($fhandle,$copyr);
+	fclose();
+
+
   chmod($backup_path.$filename, 0777);
 
 
