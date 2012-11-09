@@ -1,6 +1,6 @@
 <?php
 include "auth.php";
-$backup_path="./backup/";
+$backup_path="saestor://sphider/backup/";
 
 $stats  = mysql_query("SHOW TABLE STATUS FROM $database LIKE '$mysql_table_prefix%'");
 $numtables = mysql_num_rows($stats);
