@@ -18,32 +18,22 @@ if($send2=="Optimize"){
    if (!is_dir($backup_path)) mkdir($backup_path, 0766);
    chmod($backup_path, 0777);
 
-	//$fp = gzopen ($backup_path.$filename,"w");
-	$fhandle = fopen($backup_path.$filename,"w");
-	if (!$fhandle) {
-		print "Configuration file is not writable.";
-	}
+	$fp = gzopen ($backup_path.$filename,"w");
 
 	$copyr="# Table backup from Sphider\n".
 		   "# Creation date: ".date("d-M-Y H:s",time())."\n".
 		   "# Database: ".$database."\n".
 		   "# MySQL Server version: ".mysql_get_server_info()."\n\n" ;
 
-	//gzwrite ($fp,$copyr);
-	//gzclose ($fp);
-	
-	fwrite($fhandle,$copyr);
-	fclose();
-
-
+	gzwrite ($fp,$copyr);
+	gzclose ($fp);
   chmod($backup_path.$filename, 0777);
 
-
-if (!eregi("/restore\.",$_SERVER['PHP_SELF'])) {
-	$cur_time=date("Y-m-d H:i");
-	$i = 0;  
-	$fp = gzopen ($backup_path.$filename,"a");
-	while($i < $numtables) { 
+	if (!eregi("/restore\.",$_SERVER['PHP_SELF'])) {
+		$cur_time=date("Y-m-d H:i");
+		$i = 0;  
+		$fp = gzopen ($backup_path.$filename,"a");
+		while($i < $numtables) { 
            if (isset($tables[$i])) {
 	         	 get_def($database,$tables[$i],$fp);
 	           if (!isset($structonly) || $structonly!="Yes") {
@@ -51,11 +41,12 @@ if (!eregi("/restore\.",$_SERVER['PHP_SELF'])) {
 	       	   }	      
 	         }
 	      $i++;
-	}	
-	   gzwrite ($fp,"# Valid end of backup from Sphider backup\n");
-     gzclose ($fp);
+		}	
+		gzwrite ($fp,"# Valid end of backup from Sphider backup\n");
+		gzclose ($fp);
+	}
 }
-}
+
 function get_def($database,$table,$fp) {
  
     $def = "";
@@ -111,6 +102,7 @@ function get_content($database,$table,$fp) {
      gzwrite ($fp,"\n\n");
      
 }
+
 function diff_microtime($mt_old,$mt_new)
 {
   list($old_usec, $old_sec) = explode(' ',$mt_old);
