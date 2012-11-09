@@ -1,4 +1,4 @@
-<center><font size=16 color="blue">
+<center><font size=16 color="black">
 <?php
 print "<br/<br/<br/<br/<br/><br/>";
 print "<br/><b>Welcome to Sphider for SAE! </b><br/>";
