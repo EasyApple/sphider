@@ -1,6 +1,7 @@
 <?php
 include "auth.php";
 $backup_path="saestor://sphider/backup/";
+$filename="app_sphider.sql.gz";
 
 $stats  = mysql_query("SHOW TABLE STATUS FROM $database LIKE '$mysql_table_prefix%'");
 $numtables = mysql_num_rows($stats);
@@ -23,11 +24,6 @@ if($send2=="Optimize"){
                "# Creation date: ".date("d-M-Y H:s",time())."\n".
                "# Database: ".$database."\n".
                "# MySQL Server version: ".mysql_get_server_info()."\n\n" ;
-
-	if (!$fp) {
-		print "Backup file is not writable.";
-	}
-
 	gzwrite ($fp,$copyr);
 	gzclose ($fp);
   chmod($backup_path.$filename, 0777);
