@@ -18,7 +18,6 @@ if($send2=="Optimize"){
    if (!is_dir($backup_path)) mkdir($backup_path, 0766);
    chmod($backup_path, 0777);
 
-	$filename="app_sphider.sql";
 	//$fp = gzopen ($backup_path.$filename,"w");
 	$fhandle = fopen($backup_path.$filename,"w");
 	if (!$fhandle) {
