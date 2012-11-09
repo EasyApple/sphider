@@ -93,6 +93,7 @@ function checkAll(theForm, cName, allNo_stat) {
   		}
   	}	
 
+/*
 echo "
 <tr><td colspan='6'>
 <input type='checkbox' name='chg' onclick=\"checkAll(document.getElementById('dbform'),'check',this);\"><b>Check all tables</b>
@@ -118,6 +119,19 @@ echo "
 </tr>
 </table>
 
+</form>
+<br>
+<table width='94%' border='0' cellspacing='0' cellpadding='0' align='center'>
+  <TR> 
+	  <TD valign='top'>";
+*/
+
+echo "
+<tr><td colspan='6'>
+<input type='checkbox' name='chg' onclick=\"checkAll(document.getElementById('dbform'),'check',this);\"><b>Check all tables</b>
+</td></tr></table>
+<center><input  id='submit' type='submit' name='send2' value='Optimize'></center><br>
+<center>
 </form>
 <br>
 <table width='94%' border='0' cellspacing='0' cellpadding='0' align='center'>
