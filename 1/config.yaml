@@ -1,4 +1,4 @@
----
 name: sphider
 version: 1
-...
+handle:
+- directoryindex:  search.php index.php 
