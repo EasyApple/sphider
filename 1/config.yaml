@@ -1,4 +1,5 @@
 name: sphider
 version: 1
 handle:
-- directoryindex:  search.php index.php 
+- directoryindex: search.php index.php
+- mime:  if( path ~ "\.gz$") type "application/zip"
