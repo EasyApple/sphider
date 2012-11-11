@@ -19,7 +19,7 @@
 	$all = 0; 
 	extract (getHttpVars());
 	//$settings_dir = "../settings";
-	$settings_dir = "saestor://sphider/settings"
+	$settings_dir = "saestor://sphider/settings";
 	require_once ("$settings_dir/conf.php");
 
 	include "messages.php";
