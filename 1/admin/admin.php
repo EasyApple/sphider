@@ -12,7 +12,8 @@ $include_dir = "../include";
 include "auth.php";
 include "$include_dir/commonfuncs.php";
 extract (getHttpVars());
-$settings_dir = "../settings";
+//$settings_dir = "../settings";
+$settings_dir = "saestor://sphider/settings"
 $template_dir = "../templates";
 include "$settings_dir/conf.php";
 set_time_limit (0);
