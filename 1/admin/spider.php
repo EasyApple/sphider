@@ -10,7 +10,7 @@
 	
 	//set_time_limit (0);
 	if(!ini_get('safe_mode')){
-		set_time_limit(25);
+		set_time_limit(30);
 	}
 
 	$include_dir = "../include";
