@@ -9,10 +9,6 @@
 ********************************************/
 	
 	//set_time_limit (0);
-	if(!ini_get('safe_mode')){
-		set_time_limit(30);
-	}
-
 	$include_dir = "../include";
 	include "auth.php";
 	require_once ("$include_dir/commonfuncs.php");
