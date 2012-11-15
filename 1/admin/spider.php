@@ -7,15 +7,14 @@
 * Thanks to Antoine Bajolet for ideas and
 * several code pieces
 ********************************************/
-	
-	//set_time_limit (0);
+
+	set_time_limit (0);
 	$include_dir = "../include";
 	include "auth.php";
 	require_once ("$include_dir/commonfuncs.php");
 	$all = 0; 
 	extract (getHttpVars());
-	//$settings_dir = "../settings";
-	$settings_dir = "saestor://sphider/settings";
+	$settings_dir =  "../settings";
 	require_once ("$settings_dir/conf.php");
 
 	include "messages.php";
@@ -178,7 +177,6 @@
 				$needsReindex = 0;
 			}
 		}*/
-
 		ini_set("user_agent", $user_agent);
 		if ($url_status['state'] == 'ok') {
 			$OKtoIndex = 1;
@@ -237,8 +235,7 @@
 				$newdomain = $urlparts['host'];
 				$type = 0;
 				
-				/*
-				if ($newdomain <> $domain)
+		/*		if ($newdomain <> $domain)
 					$domainChanged = 1;
 
 				if ($domaincb==1) {
@@ -246,8 +243,7 @@
 					if (substr($newdomain, $start) == $supdomain) {
 						$domainChanged = 0;
 					}
-				}
-				*/
+				}*/
 
 				// remove link to css file
 				//get all links from file
