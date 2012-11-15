@@ -1,2 +1,9 @@
+<center><font size=16 color="black">
 <?php
-echo '<strong>Welcome to SAE!</strong>';
+print "<br/<br/<br/<br/<br/><br/>";
+print "<br/><b>Welcome to Sphider for SAE! </b><br/>";
+print "<br/><b>Go to <a href=\"search.php\">search.php</a> to start sphider.</b><br/>";
+print "<br/><b>Or go to <a href=\"admin\admin.php\">admin.php</a> to start configer.</b><br/>";
+?>
+</font></center>
+
