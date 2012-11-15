@@ -1,0 +1,7 @@
+<appwizard><introduction><name></name><author>Sphider</author><icon></icon><homepage></homepage><description><![CDATA[Sphider SAE 平台移值]]></description></introduction><platform><services><service></service><service name="sphider"  params="数据存储">Storage</service><service>Mysql</service></services><appconfig><tpl><![CDATA[
+name: <<appname>>
+version: <<version>>
+version: 1
+...
+
+]]></tpl></appconfig></platform><code><initScript>admin/install.php</initScript></code></appwizard>
