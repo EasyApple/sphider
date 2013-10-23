@@ -1,7 +1,7 @@
 <?php 
 	error_reporting(E_ERROR | E_PARSE);	
 	$admin = "admin";
-	$admin_pw = "admin";
+	$admin_pw = "why001";
 
 	session_start();
 	
